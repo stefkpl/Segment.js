@@ -1,6 +1,7 @@
 (function( $ ){
     $.fn.extend({
         Segment: function ( ) {
+		var is_disabled = $(this).prop("disabled");
 			$(this).each(function (){
 				var self = $(this);
 				var onchange = self.attr('onchange');
@@ -13,9 +14,11 @@
 					wrapper.append(option);
 				});
 				wrapper.find("span.option").click(function (){
-					wrapper.find("span.option").removeClass("active");
-					$(this).addClass("active");
-					self.val($(this).attr('value'));
+				 	if (!is_disabled) {
+						wrapper.find("span.option").removeClass("active");
+						$(this).addClass("active");
+						self.val($(this).attr('value'));
+					}
 				});
 				$(this).after(wrapper);
 				$(this).hide();
