@@ -23,6 +23,11 @@ Usage:
 	<option value="0">No</option>
 </select>
 
+<select disabled class="segment-select">
+	<option value="1">Yes</option>
+	<option value="0">No</option>
+</select>
+
 <!-- Load jQuery and Segment.js -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
